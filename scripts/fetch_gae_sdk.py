@@ -25,7 +25,7 @@ import json
 import os
 import io
 import sys
-import urllib2
+import urllib
 import zipfile
 
 _SDK_URL = (
