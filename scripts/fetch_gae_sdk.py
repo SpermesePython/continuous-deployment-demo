@@ -34,7 +34,9 @@ _SDK_URL = (
 
 def get_gae_versions():
     try:
-        version_info_json = urllib.request.urlopen(_SDK_URL).read()
+        version_info_json = urllib.request.urlopen(_SDK_URL)
+        print("worked")
+        print(version_info_json.read())
     except:
         print("URLLib probs")
         return {}
