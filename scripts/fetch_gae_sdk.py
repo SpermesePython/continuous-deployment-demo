@@ -34,12 +34,12 @@ _SDK_URL = (
 
 def get_gae_versions():
     try:
-        version_info_json = urllib.request.urlretrieve(_SDK_URL)
+        version_info_json = urllib.request.urlopen(_SDK_URL)
     except Exception as e:
         print(e)
         return {}
     try:
-        version_info = json.loads(version_info_json)
+        version_info = json.loads(version_info_json.read())
     except Exception as e:
         print(e)
         return {}
