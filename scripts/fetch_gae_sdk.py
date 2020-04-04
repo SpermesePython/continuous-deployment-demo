@@ -25,7 +25,7 @@ import json
 import os
 import io
 import sys
-from urllib import *
+import urllib
 import zipfile
 
 _SDK_URL = (
@@ -35,10 +35,8 @@ _SDK_URL = (
 def get_gae_versions():
     try:
         version_info_json = urllib.request.urlopen(_SDK_URL)
-        print("worked")
-        print(version_info_json.read())
-    except:
-        print("URLLib probs")
+    except Exception as e:
+        print(e)
         return {}
     try:
         version_info = json.loads(version_info_json)
