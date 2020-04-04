@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <title>Main Page</title>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form action="/" method="POST">
+
+        <h3>Enter your values for either calculator </h3>
+        <h3>__________________________________________________________________</h3>
+
+        <h1>BMI Calculator</h1>
+
+        <label> Height (Feet) </label>
+        <input type="number" name="feet" value={{request.form.feet}}>
+        <label> Height (Inches) </label>
+        <input type="number" name="inches" value={{request.form.inches}}>
+        <label> Weight (Pounds) </label>
+        <input type="number" name="weight" value={{request.form.weight}}>
+
+        <h1>Retirement Age Calculator</h1>
+
+        <label> Age </label>
+        <input type="number" name="age" value={{request.form.age}}>
+        <label> Salary </label>
+        <input type="number" name="salary" value={{request.form.salary}}>
+        <label> Savings (%) </label>
+        <input type="number" name="savings" value={{request.form.savings}}>
+        <label> Goal </label>
+        <input type="number" name="goal" value={{request.form.goal}}>
+        <h3>__________________________________________________________________</h3>
+        <button type="submit"> Submit </button>
+    </form>
+</body>
+</html>
