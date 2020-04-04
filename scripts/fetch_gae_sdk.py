@@ -40,7 +40,8 @@ def get_gae_versions():
         return {}
     try:
         version_info = json.loads(version_info_json)
-    except:
+    except Exception as e:
+        print(e)
         return {}
     return version_info.get('items', {})
 
