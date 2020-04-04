@@ -79,9 +79,10 @@ def main(argv):
     sdk_urls = get_sdk_urls(sdk_versions)
     for sdk_url in sdk_urls:
         try:
-            sdk_contents = io.StringIO(urllib.request.urlopen(sdk_url).read())
+            sdk_contents = io(urllib.request.urlopen(sdk_url).read())
             break
-        except:
+        except Exception as e:
+            print(e)
             pass
     else:
         print('Could not read SDK from any of {}'.format(sdk_urls))
