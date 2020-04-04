@@ -80,7 +80,7 @@ def main(argv):
     for sdk_url in sdk_urls:
         try:
             sdk = urllib.request.urlopen(sdk_url).read()
-            sdk_contents = io.StringIO(sdk)
+            sdk_contents = io.BytesIO(sdk)
             break
         except Exception as e:
             print(e)
