@@ -28,7 +28,7 @@ before_install:
 # [END auth]
 install:
 # Set the correct project to deploy to
-- gcloud config set project tqa-assignment
+- gcloud config set project sw-tqa-assignment
 # Install the Python dependencies
 - pip install -r requirements.txt -t lib/
 script:
