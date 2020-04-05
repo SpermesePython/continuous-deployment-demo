@@ -77,7 +77,7 @@ class MainTest(unittest.TestCase):
         savings = 15
         goal = 1000000
         message = calc_RA(age, salary, savings, goal)
-        assert message == "You will meet your savings goal at 70"
+        assert message == "You will meet your savings goal at 70.0"
 
     def test_RA_DieBeforeRetire(self):
         age = 40
@@ -93,10 +93,7 @@ class MainTest(unittest.TestCase):
         savings = 20
         goal = 1250000
         message = calc_RA(age, salary, savings, goal)
-        assert message == "You will meet your savings goal at 97"
-
-    
-
+        assert message == "You will meet your savings goal at 97.0"
 
 if __name__ == '__main__':
     unittest.main()

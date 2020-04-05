@@ -22,7 +22,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from functions import calc_BMI, calc_RA
+from functions import *
 from flask import Flask, render_template, request
 
 app = Flask(__name__)

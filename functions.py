@@ -20,6 +20,8 @@ def calc_BMI(feet, inches, weight):
     else:
         category = "Obese"
 
+    bmi = truncate(bmi, 1)
+
     return bmi, category
 
 def calc_RA(age, salary, savings, goal):
@@ -33,6 +35,8 @@ def calc_RA(age, salary, savings, goal):
 
         currentSavings = currentSavings + (savingsThisYr + employerMatch)
         currentAge = currentAge + 1
+
+    currentAge = truncate(currentAge)
 
     if (currentAge >= 100):
         message = "You will die before meeting your savings goal..."
