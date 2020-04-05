@@ -106,7 +106,7 @@ def root():
         if request.form.get("goal") != "":
             goal = float(request.form.get("goal"))
 
-        calc_RA(age, salary, savings, goal)
+        message = calc_RA(age, salary, savings, goal)
 
         return render_template('results.html', bmi = bmi, category = category, message = message)
     
