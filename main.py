@@ -55,7 +55,7 @@ def root():
         if request.form.get("weight") != "":
             weight = float(request.form.get("weight"))
 
-        bmi, category = calc_BMI(feet, inches, weight)
+        # bmi, category = functions.calc_BMI(feet, inches, weight)
 
         if request.form.get("age") != "":
             age = float(request.form.get("age"))
@@ -69,7 +69,7 @@ def root():
         if request.form.get("goal") != "":
             goal = float(request.form.get("goal"))
 
-        message = calc_RA(age, salary, savings, goal)
+        # message = functions.calc_RA(age, salary, savings, goal)
 
         return render_template('results.html', bmi = bmi, category = category, message = message)
     
