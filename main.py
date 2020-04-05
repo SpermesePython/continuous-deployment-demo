@@ -22,8 +22,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from functions import calc_BMI, calc_RA
 from flask import Flask, render_template, request
-from functions import *
 
 app = Flask(__name__)
 
@@ -38,6 +38,11 @@ def root():
     salary = 0
     savings = 0
     goal = 0
+
+    bmi = 0
+    category = ""
+
+    message = ""
 
     if request.method == "POST":
 
