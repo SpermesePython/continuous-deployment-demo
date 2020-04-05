@@ -12,15 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import *
 from functions import *
 import main
 import unittest
 
 class MainTest(unittest.TestCase):
-    
-    def setUp(self):
-        self.app = main.app.test_client()
 
     def test_BMI_UW(self):
         feet = 5
